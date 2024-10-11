@@ -8,4 +8,4 @@ add_subdirectory(second_lib)
 
 add_executable(Math main.cpp)
 
-target_link_libraries(Math sum_lib mul_lib)
+target_link_libraries(Math ${CMAKE_SOURCE_DIR}/first_lib/sum_lib.lib ${CMAKE_SOURCE_DIR}/second_lib/mul_lib.lib)
